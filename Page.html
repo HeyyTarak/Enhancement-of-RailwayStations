@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            overflow: hidden; 
+        }
+        .container {
+            text-align: center;
+            animation: fadeIn 1s ease-out; 
+        }
+        .logo img {
+            width: 474px;
+            margin-bottom: 20px;
+            border-radius: 80%;
+            object-fit: cover;
+            transition: transform 0.3s ease, opacity 0.3s ease; 
+            animation: fadeIn 2s ease-out; 
+        }
+        .logo img:hover {
+            transform: scale(1.05); 
+            opacity: 0.8; 
+        }
+        .get-started-button {
+            padding: 10px 20px;
+            font-size: 30px;
+            color: #04554a;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        .get-started-button:hover {
+            background-color: hsl(192, 68%, 81%);
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="Trainlogo.png" alt="Logo">
+        </div>
+        <button class="get-started-button" onclick="window.location.href='loginPage.html'">Get Started</button>
+    </div>
+</body>
+</html>
