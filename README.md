@@ -2,6 +2,7 @@
  
 Problem Statement: Enhancing Navigation for Railway Station Facilities
 and Locations under the Theme of Transportation and Logistics.
+
 Proposed Solution:
 Our solution involves creating a dynamic web platform offering features
 such as tailored station insights, city-specific station navigation, and
@@ -18,27 +19,30 @@ restrooms, ticket counters, waiting areas, etc.
  * Facility details: Upon clicking a facility icon on the map, users can access
 detailed information such as items available, accepted payment methods,
 discounts, and more.
+
 Technology Stack:
 • Frontend: HTML, Map Library, CSS
 • Backend: Python, Django, Database, GeoJSON, Data Structures
+
 Solution Representation:
 We represent our solution through image snapshots, screen recordings,
 and detailed flowcharts, providing both visual and process clarity.
+
 Feasibility and Viability:
 Potential challenges include:
 • Precision and cohesion of data
 • Mapping fidelity and granularity
 • Intuitive usability challenges
 • Seamless station integration
+
 Mitigation Strategies:
 • Deploying robust data cleaning and harmonization procedures
 • Focusing on core insights and simplifying navigation guidance
-Target Audience:
-Our primary focus is on family groups and individuals with disabilities who
-require accessible and efficient navigation.
+
 Key Benefits:
 • Streamlined operations
 • Competitive edge through innovative mapping solutions
+
 Research Sources:
 We utilized resources like Google Search, Wikipedia, and Indianrail to
 gather data and develop a robust solution.
