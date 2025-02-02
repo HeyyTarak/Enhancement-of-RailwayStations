@@ -4,50 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
+        /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #ffffff;
-            overflow: hidden; 
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            overflow: hidden;
+            color: #333;
         }
+
+        /* Navigation Bar */
+        .nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        /* Main Container */
         .container {
             text-align: center;
-            animation: fadeIn 1s ease-out; 
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 400px;
+            animation: fadeIn 1s ease-out;
         }
+
+        /* Logo */
         .logo img {
-            width: 474px;
+            width: 150px;
+            height: 150px;
             margin-bottom: 20px;
-            border-radius: 80%;
+            border-radius: 50%;
             object-fit: cover;
-            transition: transform 0.3s ease, opacity 0.3s ease; 
-            animation: fadeIn 2s ease-out; 
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            animation: float 4s ease-in-out infinite;
         }
+
         .logo img:hover {
-            transform: scale(1.05); 
-            opacity: 0.8; 
+            transform: scale(1.1);
+            opacity: 0.9;
         }
+
+        /* Get Started Button */
         .get-started-button {
-            padding: 10px 20px;
-            font-size: 30px;
-            color: #04554a;
-            background-color: #ffffff;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #2193b0;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .get-started-button:hover {
-            background-color: hsl(192, 68%, 81%);
-            transform: translateY(-3px); 
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+            background-color: #6dd5ed;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
+
+        /* Animations */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -58,9 +104,51 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+                top: 10px;
+            }
+
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            .logo img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .get-started-button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Main Content -->
     <div class="container">
         <div class="logo">
             <img src="Trainlogo.png" alt="Logo">
